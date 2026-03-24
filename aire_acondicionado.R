@@ -55,8 +55,8 @@ ggplot(ac_dep, aes(
   coord_flip() + 
   scale_y_continuous(
     expand = c(0,0), 
-    breaks = c(0, 0.25, 0.50, 0.75, 1), 
-    labels = c("0", "25%", "50%", "75%", "100%")) +
+    breaks = c(0, 0.20, 0.40, 0.60, 0.80, 1), 
+    labels = c("0", "20%", "40%", "60%", "80%", "100%")) +
   theme_bw(16) +
   labs(x = "Departamento", y = "Porcentaje de hogares", 
        fill = "¿Posee aire acondicionado?", 
