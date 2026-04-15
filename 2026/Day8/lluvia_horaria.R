@@ -31,7 +31,7 @@ pct_tarde <- lluvia_horas |>
   filter(hora > 18) |> 
   pull(pct) |> 
   sum() |> 
-  round(1)
+  round(0)
 
 arrow_segment_df <- tibble(
   x    = 18,
@@ -48,6 +48,7 @@ p <- ggplot(lluvia_horas, aes(x = hora, y = pct)) +
     mapping = aes(x = x, y = y, xend = xend, yend = yend, label = label),
     color = "cornflowerblue",
     family = "roboto",
+    size = 6,
     arrow = arrow(length = unit(0.2, "cm"), type = "closed"), 
     inherit.aes = FALSE, linewidth = 0.5) + 
   scale_x_continuous(
@@ -73,7 +74,7 @@ p <- ggplot(lluvia_horas, aes(x = hora, y = pct)) +
   ) +
   guides(theta = "axis_textpath") +
   labs(
-    title    = "Lluvia horaria Santa Tecla",
+    title    = "El 40% de la lluvia total cae entre las 18:00 y medianoche",
     subtitle = "Porcentaje de lluvia por hora del día",
     caption  = "Fuente: MARN"
   ) +
