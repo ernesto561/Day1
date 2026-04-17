@@ -44,9 +44,9 @@ pct_tarde <- lluvia_horas |>
 
 arrow_segment_df <- tibble(
   x    = 18,
-  y    = max_pct * 1.4,
+  y    = max_pct * 1.3,
   xend = 23.5,
-  yend = max_pct * 1.4,
+  yend = max_pct * 1.3,
   label = glue("{pct_tarde}% de la lluvia")
 )
 
